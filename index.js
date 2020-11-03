@@ -238,7 +238,7 @@ Using the annoyingSong function below do the following:
 function annoyingSong(num){
   let str = "";
   while (num > 0){
-      str += (num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num = num-1) +" bottles of soda on the wall");
+      str += (num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num = num-1) +" bottles of soda on the wall ");
       num--;
   }
   return str;
