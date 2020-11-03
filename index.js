@@ -164,27 +164,27 @@ function game(user, computer){
   computer = Math.random();
 
   if (computer <= (1/3)){
-      computer = "Paper"
+      computer = "paper"
   } else if (computer <= (2/3) && computer > (1/3)){
-      computer = 'Rock'
+      computer = 'rock'
   } else if (computer > (2/3)){
-      computer = "Scissors"
+      computer = "scissors"
   // eslint-disable-next-line no-extra-semi
   };
 
   if (user === computer){
       return "it's a tie!";
-  } else if (user === "Rock" && computer === "Paper"){
+  } else if (user === "rock" && computer === "paper"){
       return "you lose!";
-  } else if (user === "Scissors" && computer === "Rock"){
+  } else if (user === "scissors" && computer === "rock"){
       return "you lose!";
-  } else if (user === "Paper" && computer === "Scissors"){
+  } else if (user === "paper" && computer === "scissors"){
       return "you lose!";
-  } else if (user === "Scissors" && computer === "Paper"){
+  } else if (user === "scissors" && computer === "paper"){
       return "you win!";
-  } else if (user === "Rock" && computer === "Scissors"){
+  } else if (user === "rock" && computer === "scissors"){
       return "you win!";
-  } else if (user === "Paper" && computer === "Rock"){
+  } else if (user === "paper" && computer === "rock"){
       return "you win!";
   // eslint-disable-next-line no-extra-semi
   };
