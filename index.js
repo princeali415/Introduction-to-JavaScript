@@ -174,7 +174,7 @@ if (computer <= (1/3)){
 function game(user, computer){
 
   if (user === computer){
-      return "it's a tie!";
+      return "it's a tie";
   } else if (user === "rock" && computer === "paper"){
       return "you lose!";
   } else if (user === "scissors" && computer === "rock"){
