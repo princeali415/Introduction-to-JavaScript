@@ -116,9 +116,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age, weight){
+  if (age >= 1){                // first conditional to check if adult or puppy (years)
+    if (weight <= 5){           // nested conditional checks weight and returns correct number of pounds of raw food
+        return weight*.05;
+    } else if (weight > 5 && weight <= 10){
+        return weight*.04;
+    } else if (weight > 11 && weight <= 15){
+        return weight*.03;
+    } else{
+        return weight*.02;
+    }
+} else {                        // conditional to return calculation for number of pounds of raw food for puppies
+    if (age <= (1/3)){       // use of age* because we are calculating based on how many months old puppies are
+        return weight*.1;
+    }else if (age >= (1/3) && age <= (7/12)){
+        return weight*.05;
+    } else if (age >= (7/12) && age < 1){
+        return weight*.04;
+    }
   }
+}
 
 
 
