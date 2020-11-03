@@ -262,15 +262,15 @@ Using the grade function below do the following:
   
 function grade(score){
   if (score <= 100 && score >=90){
-      return "A";
+      return "you got a A";
   } else if (score < 90 && score >= 80){
-      return "B";
+      return "you got a B";
   } else if (score < 80 && score >= 70 ){
-      return "C";
+      return "you got a C";
   } else if (score < 70 && score >= 60){
-      return "D";
+      return "you got a D";
   } else {
-      return "F";
+      return "you got a F";
   }
 // eslint-disable-next-line no-extra-semi
 };
