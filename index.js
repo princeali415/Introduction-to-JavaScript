@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18;
+if (votingAge >= 18){
+  return true;
+};
 
 
 /*
@@ -31,7 +34,11 @@ Do the following:
    HINT: no function required
 */
 
-
+let a = 1;
+let b = 2;
+if (b>a){
+  a = a + b;
+};
 
 
 
