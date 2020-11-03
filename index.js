@@ -36,7 +36,7 @@ Do the following:
 
 let a = 1;
 let b = 2;
-if (b>a){
+if (b > a){
   a = a + b;
 };
 
@@ -53,8 +53,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let str = "1999";
+let num = Number(str)
+console.log(num)
 
 /*
 Task 1d - Multiply
@@ -65,9 +66,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a,b){
+    return a*b;
+  };
 
 
 
