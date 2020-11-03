@@ -290,7 +290,7 @@ function vowelCounter(str) {
   let count = 0;                          // create var count to hold the count of vowels
   for (let i = 0; i < str.length; i++){   // for loop to iterate through each word in str
       if (str[i].match(/[aeiou]/gi)){     // conditional with regex to check if each word in string matches with regex statement of vowel
-          count+                         // if it does then add 1 to count
+          count++                         // if it does then add 1 to count
       }
   }
   return count;                           // returns total count
