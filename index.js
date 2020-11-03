@@ -21,7 +21,7 @@ Do the following:
 let votingAge = 18;
 if (votingAge >= 18){
   console.log(true)
-};
+}
 
 
 /*
@@ -39,7 +39,7 @@ let a = 1;
 let b = 2;
 if (b > a){
   a = a + b;
-};
+}
 
 
 
@@ -69,7 +69,7 @@ Do the following:
 
 function multiply(a,b){
     return (a * b);
-  };
+  }
 
 
 
@@ -142,7 +142,32 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  
+  computer = Math.random();
+
+  if (computer <= (1/3)){
+      computer = "Paper"
+  } else if (computer <= (2/3) && computer > (1/3)){
+      computer = 'Rock'
+  } else if (computer > (2/3)){
+      computer = "Scissors"
+  };
+
+  if (user === computer){
+      return "it's a tie!";
+  } else if (user === "Rock" && computer === "Paper"){
+      return "you lose!";
+  } else if (user === "Scissors" && computer === "Rock"){
+      return "you lose!";
+  } else if (user === "Paper" && computer === "Scissors"){
+      return "you lose!";
+  } else if (user === "Scissors" && computer === "Paper"){
+      return "you win!";
+  } else if (user === "Rock" && computer === "Scissors"){
+      return "you win!";
+  } else if (user === "Paper" && computer === "Rock"){
+      return "you win!";
+  }
 }
   
   
