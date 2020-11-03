@@ -83,8 +83,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -142,7 +142,7 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-  
+
   computer = Math.random();
 
   if (computer <= (1/3)){
