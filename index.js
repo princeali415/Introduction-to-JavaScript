@@ -160,17 +160,18 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(user, computer){
-  computer = Math.random();
+let computer = Math.random();
 
-  if (computer <= (1/3)){
-      computer = "paper"
-  } else if (computer <= (2/3) && computer > (1/3)){
-      computer = 'rock'
-  } else if (computer > (2/3)){
-      computer = "scissors"
-  // eslint-disable-next-line no-extra-semi
-  };
+if (computer <= (1/3)){
+    computer = "paper"
+} else if (computer <= (2/3) && computer > (1/3)){
+    computer = 'rock'
+} else if (computer > (2/3)){
+    computer = "scissors"
+// eslint-disable-next-line no-extra-semi
+};
+
+function game(user, computer){
 
   if (user === computer){
       return "it's a tie!";
