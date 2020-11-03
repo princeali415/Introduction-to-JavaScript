@@ -19,7 +19,7 @@ Do the following:
 */
 let votingAge = 18;
 if (votingAge >= 18){
-  return true;
+  console.log(true)
 };
 
 
@@ -54,8 +54,8 @@ Do the following:
 */
 
 let str = "1999";
-let num = Number(str)
-console.log(num)
+let num = Number(str);
+console.log(num);
 
 /*
 Task 1d - Multiply
@@ -67,7 +67,7 @@ Do the following:
 */
 
 function multiply(a,b){
-    return a*b;
+    return (a * b);
   };
 
 
