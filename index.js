@@ -161,7 +161,6 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-
   computer = Math.random();
 
   if (computer <= (1/3)){
@@ -170,6 +169,7 @@ function game(user, computer){
       computer = 'Rock'
   } else if (computer > (2/3)){
       computer = "Scissors"
+  // eslint-disable-next-line no-extra-semi
   };
 
   if (user === computer){
@@ -186,8 +186,10 @@ function game(user, computer){
       return "you win!";
   } else if (user === "Paper" && computer === "Rock"){
       return "you win!";
-  }
-}
+  // eslint-disable-next-line no-extra-semi
+  };
+// eslint-disable-next-line no-extra-semi
+};
   
   
 
