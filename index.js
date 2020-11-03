@@ -260,10 +260,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+  if (score <= 100 && score >=90){
+      return "A";
+  } else if (score < 90 && score >= 80){
+      return "B";
+  } else if (score < 80 && score >= 70 ){
+      return "C";
+  } else if (score < 70 && score >= 60){
+      return "D";
+  } else {
+      return "F";
   }
-  
+// eslint-disable-next-line no-extra-semi
+};
   
   
   
@@ -281,9 +291,16 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(str) {
+  let count = 0;                          // create var count to hold the count of vowels
+  for (let i = 0; i < str.length; i++){   // for loop to iterate through each word in str
+      if (str[i].match(/[aeiou]/gi)){     // conditional with regex to check if each word in string matches with regex statement of vowel
+          count++                         // if it does then add 1 to count
+      }
+  }
+  return count;                           // returns total count
+// eslint-disable-next-line no-extra-semi
+};
 
 
 
