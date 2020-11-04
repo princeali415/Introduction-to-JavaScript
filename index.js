@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 18;
+if (votingAge >= 18){
+  console.log(true)
+}
 
 
 /*
@@ -31,7 +35,11 @@ Do the following:
    HINT: no function required
 */
 
-
+let a = 1;
+let b = 2;
+if (b > a){
+  a = a + b;
+}
 
 
 
@@ -46,8 +54,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let str = "1999";
+let num = Number(str);
+console.log(num);
 
 /*
 Task 1d - Multiply
@@ -58,8 +67,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return (a * b);
   }
 
 
@@ -74,8 +83,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -107,9 +116,28 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if (age >= 1){                // first conditional to check if adult or puppy (years)
+      if (weight <= 5){           // nested conditional checks weight and returns correct number of pounds of raw food
+          return weight*.05;
+      } else if (weight > 5 && weight <= 10){
+          return weight*.04;
+      } else if (weight > 11 && weight <= 15){
+          return weight*.03;
+      } else{
+          return weight*.02;
+      }
+  } else {                        // conditional to return calculation for number of pounds of raw food for puppies
+      if (age <= (1/3)){       // use of age* because we are calculating based on how many months old puppies are
+          return weight*.1;
+      }else if (age >= (1/3) && age <= (7/12)){
+          return weight*.05;
+      } else if (age >= (7/12) && age < 1){
+          return weight*.04;
+      }
   }
+// eslint-disable-next-line no-extra-semi
+};
 
 
 
@@ -132,9 +160,37 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+let computer = Math.random();
+
+if (computer <= (1/3)){
+    computer = "paper"
+} else if (computer <= (2/3) && computer > (1/3)){
+    computer = 'rock'
+} else if (computer > (2/3)){
+    computer = "scissors"
+// eslint-disable-next-line no-extra-semi
+};
+
 function game(user, computer){
-    /*add your code here*/
-}
+
+  if (user === computer){
+      return "it's a tie";
+  } else if (user === "rock" && computer === "paper"){
+      return "you lose!";
+  } else if (user === "scissors" && computer === "rock"){
+      return "you lose!";
+  } else if (user === "paper" && computer === "scissors"){
+      return "you lose!";
+  } else if (user === "scissors" && computer === "paper"){
+      return "you win!";
+  } else if (user === "rock" && computer === "scissors"){
+      return "you win!";
+  } else if (user === "paper" && computer === "rock"){
+      return "you win!";
+  // eslint-disable-next-line no-extra-semi
+  };
+// eslint-disable-next-line no-extra-semi
+};
   
   
 
@@ -149,8 +205,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
 
 
@@ -163,8 +219,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48
   }
  
 
@@ -179,10 +235,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong(num){
+  let str = (num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num-1) +" bottles of soda on the wall");
+  return str
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -199,10 +255,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+  if (score <= 100 && score >=90){
+      return "you got a A";
+  } else if (score < 90 && score >= 80){
+      return "you got a B";
+  } else if (score < 80 && score >= 70 ){
+      return "you got a C";
+  } else if (score < 70 && score >= 60){
+      return "you got a D";
+  } else {
+      return "you got a F";
   }
-  
+// eslint-disable-next-line no-extra-semi
+};
   
   
   
@@ -220,9 +286,16 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+function vowelCounter(str) {
+  let count = 0;                          // create var count to hold the count of vowels
+  for (let i = 0; i < str.length; i++){   // for loop to iterate through each word in str
+      if (str[i].match(/[aeiou]/gi)){     // conditional with regex to check if each word in string matches with regex statement of vowel
+          count++                         // if it does then add 1 to count
+      }
+  }
+  return count;                           // returns total count
+// eslint-disable-next-line no-extra-semi
+};
 
 
 
